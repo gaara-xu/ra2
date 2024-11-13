@@ -16,7 +16,7 @@ docker rm $CONTAINER_NAME 2>/dev/null || true
 
 # Step 3: Run the Docker container
 echo "Running the Docker container..."
-docker run -d --name $CONTAINER_NAME -p 8081:8081 --restart always $IMAGE_NAME
+docker run -d --name $CONTAINER_NAME -p 9110:9110 --restart always $IMAGE_NAME
 
 # Step 4: Print container logs
 echo "Printing Docker container logs..."

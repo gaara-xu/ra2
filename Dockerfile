@@ -11,10 +11,10 @@ WORKDIR /usr/src/app
 COPY . /usr/src/app
 
 # Expose the port the app runs on
-EXPOSE 8081
+EXPOSE 9110
 
 # Set the default command to run the Python HTTP server
-CMD [ "python3", "-m", "http.server", "8081" ]
+CMD [ "python3", "-m", "http.server", "9110" ]
 
 # Set Docker to restart the container automatically
 LABEL com.opencontainers.image.restartPolicy="always"
