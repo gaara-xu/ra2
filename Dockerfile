@@ -1,0 +1,21 @@
+# Dockerfile for running the web server with Python
+
+# Use an official Python runtime as a base image
+FROM registry.cn-hangzhou.aliyuncs.com/google_containers/python:3.9-slim
+
+
+# Set the working directory in the container
+WORKDIR /usr/src/app
+
+# Copy the current directory contents into the container
+COPY . /usr/src/app
+
+# Expose the port the app runs on
+EXPOSE 8081
+
+# Set the default command to run the Python HTTP server
+CMD [ "python3", "-m", "http.server", "8081" ]
+
+# Set Docker to restart the container automatically
+LABEL com.opencontainers.image.restartPolicy="always"
+
