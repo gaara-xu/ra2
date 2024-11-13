@@ -1,7 +1,7 @@
 # Dockerfile for running the web server with Python
 
 # Use an official Python runtime as a base image
-FROM registry.cn-hangzhou.aliyuncs.com/google_containers/python:3.9-slim
+FROM faucet/python3
 
 
 # Set the working directory in the container
